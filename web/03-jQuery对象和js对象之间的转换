@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"></meta>
+    <title>Title</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <div id="div1">div1</div>
+    <div id="div2">div2</div>
+    <script>
+        // 1.通过js获取名称为div的所有html对象
+        var divs = document.getElementsByTagName("div");
+        for (var i=0;i < divs.length;i++){
+            divs[i].innerHTML = "aaa"
+        }
+        console.log(divs.length);
+
+        // 2.通过加强jq的方式获取
+        var $divs = $("div");
+        // $divs.html("bbb")//统一修改了div的内容
+        console.log($divs);
+
+        /*
+        * 1,js->jq:$(js对象)
+        * 2.jq->js:jq对象[索引]或者jq对象.get(索引)
+        * 因为jq都是数组
+        * */
+    </script>
+</body>
+</html>
